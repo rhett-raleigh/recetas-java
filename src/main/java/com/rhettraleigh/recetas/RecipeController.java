@@ -30,8 +30,9 @@ public class RecipeController {
         return repository.findById(id).orElseThrow(() -> new RecipeNotFoundException(id));
     }
 
-    @PostMapping("/employees")
-    Recipe newEmployee(@RequestBody Recipe newRecipe) {
+    @PostMapping("/recipes")
+    Recipe newRecipe(@RequestBody Recipe newRecipe) {
         return repository.save(newRecipe);
     }
+
 }

@@ -15,6 +15,8 @@ class LoadDatabase {
     CommandLineRunner initDatabase(RecipeRepository repository) {
 
         return args -> {
+            log.info("Preloading " + repository.save(new Recipe("Spring Rolls",
+                    "Rice paper with vegetables", "Rice paper, lettuce, carrots")));
             log.info("Preloading " + repository.save(new Recipe("Pad Thai",
                     "Thai curry with rice, bean sprouts, and vegetables", "curry, rice, bean sprouts, vegetables")));
             log.info("Preloading " + repository.save(new Recipe("Panang Curry",
